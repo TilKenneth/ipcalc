@@ -79,28 +79,24 @@ if ($mask2 eq $mask1) {
 }
 
 if ($host eq '') {
-	$error .= "&nbsp;No host given\n";
 	$host = '192.168.0.1';
 }
 
 $testhost = $host;
 $testhost =~ s/\.//g;
 if ($testhost !~ /^\d+$/) {
-	$error .= "&nbsp;Illegal value for host ('$host')\n";
 	$host = '192.168.0.1';
 }
 
 
 if ($mask1 eq '') {
-	$error .= "&nbsp;No netmask given (using default netmask of your network's class)\n";
-	$mask1 = qx($ipcalc -c $host);
+
 }
 
 
 $testhost = $mask1;
 $testhost =~ s/\.//g;
 if ($testhost !~ /^\d+$/) {
-	$error .= "&nbsp;Illegal value for netmask ('$mask1')\n";
 	$mask1 = 24;
 }
 
@@ -108,7 +104,6 @@ if ($mask2 ne '') {
 	$testhost = $mask2;
 	$testhost =~ s/\.//g;
 	if ($testhost !~ /^\d+$/) {
-		$error .= "&nbsp;Illegal value for netmask for sub/supernet ('$mask2')\n";
 		$mask2 = '';
 	}
 }
@@ -120,15 +115,14 @@ print << "EOF";
 <html lang="en">
    <head> 
    <meta charset="utf-8">
-   <title>IP Calculator / IP Subnetting</title>
-   <meta name="generator" content="ipcalc $version" />
-   <meta name="keywords" content="ipcalc,ipv4,ipv6,subnet,netmask,calculator"/>
-   <meta name="author" content="Krischan Jodies"/>
-   <meta name="application-name" content="ipcalc $version" />
+   <title>IP Calculator / IP Subnetting - (TilKenneth/internal)</title>
+   <meta name="generator" content="ipcalc $version (TilKenneth/internal)" />
+   <meta name="keywords" content="ipcalc-internal,ipv4,ipv6,subnet,netmask,calculator"/>
+   <meta name="author" content="Krischan Jodies, Github/TilKenneth"/>
+   <meta name="application-name" content="ipcalc $version (TilKenneth/internal)" />
    <meta translate="no"/>
-   <meta name="description content="ipcalc report by https://jodies.de/ipcalc"/>
+   <meta name="description content="ipcalc (TilKenneth/internal) report by https://github.com/TilKenneth/ipcalc/tree/internal"/>
    <meta name="robots" content="noindex, nofollow">
-   <link rel="shortcut icon" href="https://jodies.de/favicon.ico">
    <script language="JavaScript" type="text/javascript">
       <!-- 
       function setFocus()
@@ -143,11 +137,8 @@ print << "EOF";
 <!--
 body {
    background-color: white;
-   background-image: url("https://jodies.de/bg.gif");
    color: black;
    font-family: "Trebuchet MS", Verdana, Geneva, Helvetica, sans-serif;
-   l//ine-height: 110%;
-   l//ine-height: 1.4em;
 }
 
 A {text-decoration:none; color:#003CD7; }
@@ -211,82 +202,12 @@ print << "EOF";
 <table border=0 width="100%">
 <tr>
 <td valign="top">&nbsp;</td>
-<td><a href="https://jodies.de/ipcalc"><img src="ipcalc.gif" align=right width=100 height=95 border=0 alt=""></a></td></tr>
+<td>&nbsp;</td></tr>
 </table>
 EOF
 if ($help) {
 print << "EOF";
-<div id="help">
-   <table border=0 bgcolor="#000000" cellpadding=0 cellspacing=1>
-   <tr>
-      <td>
-         <table bgcolor="#e9edf5" border=0 width=550 cellpadding=10 cellspacing=1>
-	    <tr>
-	       <td>
-<h1>IP Calculator</h1>
 
-<p><a href="https://jodies.de/ipcalc">ipcalc</a> takes an IP address and netmask and calculates the resulting broadcast,
-network, Cisco wildcard mask, and host range. By giving a second netmask, you
-can design subnets and supernets. It is also intended to be a teaching tool
-and presents the subnetting results as easy-to-understand binary values.</p>
-
-<p>Enter your netmask(s) in <a href="https://www.ietf.org/rfc/rfc1517.txt">CIDR</a> notation (/25) or dotted decimals (255.255.255.0). 
-Inverse netmasks are recognized.
-If you omit the netmask ipcalc uses the default netmask for the class of your network.</p>
-
-<p>Look at the space between the bits of the addresses: The bits before it are
-the network part of the address, the bits after it are the host part. You can
-see two simple facts: In a network address all host bits are zero, in a
-broadcast address they are all set.</p>
-
-<p>The class of your network is determined by its first <font color="#009900">bits</font>.</p>
-
-<p>If your network is a private internet according to RFC 1918 this is remarked.
-When displaying subnets the new bits in the network part of the netmask are
-marked in a <font color="#663366">different color</font></p>
-
-<p>The <a href="https://www.cisco.com/univercd/cc/td/doc/product/software/ssr83/ptc_r/22057.htm">wildcard</a> is the inverse
-netmask as used for access control lists in Cisco routers.</p>
-
-<p>Do you want to split your network into subnets? Enter the address and netmask
-of your original network and play with the second netmask until the result matches your needs.</p>
-
-
-<p>You can have all this fun at your shell prompt. Originally ipcalc was not intended for 
-creating HTML and still works happily in /usr/local/bin/ :-)</p>
-
-<p>Questions? Comments? Drop me a <a href="mailto:$MAIL_ADDRESS">mail</a>...</p>
-
-<p>Thanks for your ideas and help to make this tool more useful:</p>
-
-<pre>
-Bartosz Fenski
-Christan Ebnoether
-Denis A. Hainsworth 
-Edward
-Foxfair Hu
-Frank Quotschalla  
-Hermann J. Beckers  
-Igor Zozulya        
-Kevin Ivory        
-Lars Mueller
-Lutz Pressler       
-Nick Clifford 
-Oliver Seufer
-Scott Davis         
-Steve Kent          
-Sven Anderson       
-Torgen Foertsch
-Tim Brown
-Victor Engmark
-</pre>
-               </td>
-	    </tr>
-	 </table>
-      </td>
-   </tr>
-   </table>
-</div>
 EOF
 }
 
@@ -335,26 +256,10 @@ if (defined $error) {
 system("$ipcalc -h $host $mask1 $mask2");
 
 print <<"EOF";
-<br>
-<table border=0 width="100%" cellspacing=10>
- <tr>
-  
-  <td nowrap valign=top>
-   <a href="https://jodies.de/ipcalc">
-   <img src="ipcalculator.png" alt="Thanks to https://www.netzwerkinfo.de/daemons/ for this ip calculator icon :-)" border=0></a><br>
-   <tt><span style="font-size: 8pt;">Version $version</span></tt></td>
- </tr>
-</table>
-<hr>
-<a href="https://jodies.de/ipcalc-archive/">Download</a><br>
-<a href="https://jodies.de/ipcalc.png">Screenshot</a> (ipcalc works also at the prompt)<br>
-<a href="https://jodies.de/ipcalc_cgi">CGI wrapper that produced this page</a>.<br>
-<a href="https://jodies.de/ipcalc-archive">Archive</a><br>
-<a href="https://jodies.de/ipcalc-faq/win32.html">How to run this under windows</a><br>
-Debian users can apt-get install ipcalc<br>
-2000-2021 <a href="mailto:$MAIL_ADDRESS">Krischan Jodies</a>
 
-</td></tr></table>
+<hr>
+This is a modified version of the original, the modifications are hosted at <a href="https://github.com/TilKenneth/ipcalc/tree/internal">https://github.com/TilKenneth/ipcalc/tree/internal</a>.
+<br>
 </center>
 </body>
 </html>

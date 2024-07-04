@@ -22,7 +22,7 @@
 use strict;
 use bignum;
 
-my $version = '0.51';
+my $version = '0.51-ki';
 
 my @class   = qw (0 8 16 24 4 5 5);
 
@@ -109,25 +109,6 @@ sub main
       $sfont  = '</font>';
       $break  = "<br>";
       #$private = "(<a href=\"https://www.ietf.org/rfc/rfc1918.txt\">Private Internet</a>)";
-#      print "<pre>\n";
-# TODO: parameters should be in title and description.
-print << 'EOF';
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="generator" content="ipcalc $version" />
-<meta name="keywords" content="ipcalc,ipv4,ipv6,subnet,netmask,calculator"/>
-<meta name="author" content="Krischan Jodies"/>
-<meta name="application-name" content="ipcalc $version" />
-<meta translate="no"/>
-<meta name="description content="ipcalc report by https://jodies.de/ipcalc"/>
-<meta name="robots" content="noindex, nofollow">
-<title>Report - ipcalc $version</title>
-</head>
-<body>
-EOF
-      print "<!-- Version $version -->\n";
    }
 
 #   foreach (@arguments) {
@@ -269,8 +250,7 @@ EOF
 
 sub end {
  if ($opt_html) {
-#   print "\n</pre>\n";
-print "<html>\n";
+    # done.
  }
  exit;
 }
@@ -1298,6 +1278,8 @@ sub ntobitcountmask
 sub usage {
     print << "EOF";
 Usage: ipcalc [options] <ADDRESS>[[/]<NETMASK>] [NETMASK]
+
+Modified from original, https://github.com/TilKenneth/ipcalc/tree/internal
 
 ipcalc takes an IP address and netmask and calculates the resulting
 broadcast, network, Cisco wildcard mask, and host range. By giving a
