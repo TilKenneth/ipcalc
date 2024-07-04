@@ -939,8 +939,8 @@ sub netblock
                      "172.16.0.0/12"  => "Private Internet,https://www.ietf.org/rfc/rfc1918.txt",
                      "10.0.0.0/8"     => "Private Internet,https://www.ietf.org/rfc/rfc1918.txt",
                      "169.254.0.0/16" => "APIPA,https://www.ietf.org/rfc/rfc3330.txt",
-		     "127.0.0.0/8"    => "Loopback,https://www.ietf.org/rfc/rfc1700.txt",
-		     "224.0.0.0/4"    => "Multicast,https://www.ietf.org/rfc/rfc3171.txt"
+                     "127.0.0.0/8"    => "Loopback,https://www.ietf.org/rfc/rfc1700.txt",
+                     "224.0.0.0/4"    => "Multicast,https://www.ietf.org/rfc/rfc3171.txt"
                    );
    my $match = 0;
    #
