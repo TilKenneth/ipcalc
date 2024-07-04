@@ -114,14 +114,20 @@ if ($mask2 ne '') {
 }
 
 
-print $query->header;
+print $query->header(-type => "text/html", -charset => "UTF-8");
 print << "EOF";
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
    <head> 
-   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+   <meta charset="utf-8">
    <title>IP Calculator / IP Subnetting</title>
+   <meta name="generator" content="ipcalc $version" />
+   <meta name="keywords" content="ipcalc,ipv4,ipv6,subnet,netmask,calculator"/>
+   <meta name="author" content="Krischan Jodies"/>
+   <meta name="application-name" content="ipcalc $version" />
+   <meta translate="no"/>
+   <meta name="description content="ipcalc report by https://jodies.de/ipcalc"/>
+   <meta name="robots" content="noindex, nofollow">
    <link rel="shortcut icon" href="https://jodies.de/favicon.ico">
    <script language="JavaScript" type="text/javascript">
       <!-- 
