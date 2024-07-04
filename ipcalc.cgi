@@ -350,7 +350,6 @@ print <<"EOF";
 <a href="https://jodies.de/ipcalc.png">Screenshot</a> (ipcalc works also at the prompt)<br>
 <a href="https://jodies.de/ipcalc_cgi">CGI wrapper that produced this page</a>.<br>
 <a href="https://jodies.de/ipcalc-archive">Archive</a><br>
-Have a look in the archives for the <b>new version 0.38</b>, with the capability to deaggregate network ranges<br>
 <a href="https://jodies.de/ipcalc-faq/win32.html">How to run this under windows</a><br>
 Debian users can apt-get install ipcalc<br>
 2000-2021 <a href="mailto:$MAIL_ADDRESS">Krischan Jodies</a>
