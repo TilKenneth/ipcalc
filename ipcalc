@@ -3,7 +3,7 @@
 
 #  IPv4 Calculator
 #  Copyright (C) Krischan Jodies 2000 - 2021
-#  krischan()jodies.de, http://jodies.de/ipcalc
+#  krischan()jodies.de, https://jodies.de/ipcalc
 #   
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -108,7 +108,7 @@ sub main
       $subnt_color = '<font color="#663366">';
       $sfont  = '</font>';
       $break  = "<br>";
-      #$private = "(<a href=\"http://www.ietf.org/rfc/rfc1918.txt\">Private Internet</a>)";
+      #$private = "(<a href=\"https://www.ietf.org/rfc/rfc1918.txt\">Private Internet</a>)";
 #      print "<pre>\n";
 print << 'EOF';
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -251,8 +251,8 @@ EOF
    if ($opt_html) {
       print << 'EOF';
     <p>
-      <a href="http://validator.w3.org/check/referer"><img border="0"
-          src="http://www.w3.org/Icons/valid-html401"
+      <a href="https://validator.w3.org/check/referer"><img border="0"
+          src="https://www.w3.org/Icons/valid-html401"
           alt="Valid HTML 4.01!" height="31" width="88"></a>
     </p>
 EOF
@@ -469,12 +469,12 @@ sub get_description
    # /31
    if (ntobitcountmask($mask) == 31) {
       if ($opt_html) { 
-         push @description,"<a href=\"http://www.ietf.org/rfc/rfc3021.txt\">PtP Link</a>";
+         push @description,"<a href=\"https://www.ietf.org/rfc/rfc3021.txt\">PtP Link</a>";
       } else {
          push @description,"PtP Link RFC 3021";
       }
    }
-#$rfc3021 = "<a href=\"http://www.ietf.org/rfc/rfc3021.txt\">Point-to-Point
+#$rfc3021 = "<a href=\"https://www.ietf.org/rfc/rfc3021.txt\">Point-to-Point
 #Link</a>";
    return join ", ",@description;
 }
@@ -931,12 +931,12 @@ sub netblock
 {
    my ($mynetwork_start,$mymask) = @_;
    my $mynetwork_end = $mynetwork_start | ((~$mymask) & $thirtytwobits);
-   my %netblocks = ( "192.168.0.0/16" => "Private Internet,http://www.ietf.org/rfc/rfc1918.txt",
-                     "172.16.0.0/12"  => "Private Internet,http://www.ietf.org/rfc/rfc1918.txt",
-                     "10.0.0.0/8"     => "Private Internet,http://www.ietf.org/rfc/rfc1918.txt",
-                     "169.254.0.0/16" => "APIPA,http://www.ietf.org/rfc/rfc3330.txt",
-		     "127.0.0.0/8"    => "Loopback,http://www.ietf.org/rfc/rfc1700.txt",
-		     "224.0.0.0/4"    => "Multicast,http://www.ietf.org/rfc/rfc3171.txt"
+   my %netblocks = ( "192.168.0.0/16" => "Private Internet,https://www.ietf.org/rfc/rfc1918.txt",
+                     "172.16.0.0/12"  => "Private Internet,https://www.ietf.org/rfc/rfc1918.txt",
+                     "10.0.0.0/8"     => "Private Internet,https://www.ietf.org/rfc/rfc1918.txt",
+                     "169.254.0.0/16" => "APIPA,https://www.ietf.org/rfc/rfc3330.txt",
+		     "127.0.0.0/8"    => "Loopback,https://www.ietf.org/rfc/rfc1700.txt",
+		     "224.0.0.0/4"    => "Multicast,https://www.ietf.org/rfc/rfc3171.txt"
                    );
    my $match = 0;
    #
@@ -1361,7 +1361,7 @@ netmask of your original network and play with the second netmask
 until the result matches your needs.
 
 Questions? Comments? Drop me a mail: krischan at jodies.de
-http://jodies.de/ipcalc
+https://jodies.de/ipcalc
 
 Thanks for your nice ideas and help to make this tool more useful: 
 

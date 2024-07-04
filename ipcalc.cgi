@@ -3,7 +3,7 @@
 # CGI Wrapper for IPv4 Calculator
 # 
 # Copyright (C) Krischan Jodies 2000 - 2021
-# krischan()jodies.de, http://jodies.de/ipcalc
+# krischan()jodies.de, https://jodies.de/ipcalc
 # 
 # Copyright (C) for the graphics ipcalc.gif and ipcalculator.png 
 # Frank Quotschalla. 2002 
@@ -122,7 +122,7 @@ print << "EOF";
    <head> 
    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
    <title>IP Calculator / IP Subnetting</title>
-   <link rel="shortcut icon" href="http://jodies.de/favicon.ico">
+   <link rel="shortcut icon" href="https://jodies.de/favicon.ico">
    <script language="JavaScript" type="text/javascript">
       <!-- 
       function setFocus()
@@ -137,7 +137,7 @@ print << "EOF";
 <!--
 body {
    background-color: white;
-   background-image: url("bg.gif");
+   background-image: url("https://jodies.de/bg.gif");
    color: black;
    font-family: "Trebuchet MS", Verdana, Geneva, Helvetica, sans-serif;
    l//ine-height: 110%;
@@ -205,7 +205,7 @@ print << "EOF";
 <table border=0 width="100%">
 <tr>
 <td valign="top">&nbsp;</td>
-<td><a href="http://jodies.de/ipcalc"><img src="ipcal03.gif" align=right width=100 height=95 border=0 alt=""></a></td></tr>
+<td><a href="https://jodies.de/ipcalc"><img src="ipcalc.gif" align=right width=100 height=95 border=0 alt=""></a></td></tr>
 </table>
 EOF
 if ($help) {
@@ -219,12 +219,12 @@ print << "EOF";
 	       <td>
 <h1>IP Calculator</h1>
 
-<p><a href="http://jodies.de/ipcalc">ipcalc</a> takes an IP address and netmask and calculates the resulting broadcast,
+<p><a href="https://jodies.de/ipcalc">ipcalc</a> takes an IP address and netmask and calculates the resulting broadcast,
 network, Cisco wildcard mask, and host range. By giving a second netmask, you
 can design subnets and supernets. It is also intended to be a teaching tool
 and presents the subnetting results as easy-to-understand binary values.</p>
 
-<p>Enter your netmask(s) in <a href="http://www.ietf.org/rfc/rfc1517.txt">CIDR</a> notation (/25) or dotted decimals (255.255.255.0). 
+<p>Enter your netmask(s) in <a href="https://www.ietf.org/rfc/rfc1517.txt">CIDR</a> notation (/25) or dotted decimals (255.255.255.0). 
 Inverse netmasks are recognized.
 If you omit the netmask ipcalc uses the default netmask for the class of your network.</p>
 
@@ -239,7 +239,7 @@ broadcast address they are all set.</p>
 When displaying subnets the new bits in the network part of the netmask are
 marked in a <font color="#663366">different color</font></p>
 
-<p>The <a href="http://www.cisco.com/univercd/cc/td/doc/product/software/ssr83/ptc_r/22057.htm">wildcard</a> is the inverse
+<p>The <a href="https://www.cisco.com/univercd/cc/td/doc/product/software/ssr83/ptc_r/22057.htm">wildcard</a> is the inverse
 netmask as used for access control lists in Cisco routers.</p>
 
 <p>Do you want to split your network into subnets? Enter the address and netmask
@@ -334,18 +334,18 @@ print <<"EOF";
  <tr>
   
   <td nowrap valign=top>
-   <a href="http://jodies.de/ipcalc">
-   <img src="ipcalculator.png" alt="Thanks to http://www.netzwerkinfo.de/daemons/ for this ip calculator icon :-)" border=0></a><br>
+   <a href="https://jodies.de/ipcalc">
+   <img src="ipcalculator.png" alt="Thanks to https://www.netzwerkinfo.de/daemons/ for this ip calculator icon :-)" border=0></a><br>
    <tt><span style="font-size: 8pt;">Version $version</span></tt></td>
  </tr>
 </table>
 <hr>
-<a href="http://jodies.de/ipcalc-archive/">Download</a><br>
-<a href="ipcalc.png">Screenshot</a> (ipcalc works also at the prompt)<br>
-<a href="http://jodies.de/ipcalc_cgi">CGI wrapper that produced this page</a>.<br>
-<a href="ipcalc-archive">Archive</a><br>
+<a href="https://jodies.de/ipcalc-archive/">Download</a><br>
+<a href="https://jodies.de/ipcalc.png">Screenshot</a> (ipcalc works also at the prompt)<br>
+<a href="https://jodies.de/ipcalc_cgi">CGI wrapper that produced this page</a>.<br>
+<a href="https://jodies.de/ipcalc-archive">Archive</a><br>
 Have a look in the archives for the <b>new version 0.38</b>, with the capability to deaggregate network ranges<br>
-<a href="ipcalc-faq/win32.html">How to run this under windows</a><br>
+<a href="https://jodies.de/ipcalc-faq/win32.html">How to run this under windows</a><br>
 Debian users can apt-get install ipcalc<br>
 2000-2021 <a href="mailto:$MAIL_ADDRESS">Krischan Jodies</a>
 
