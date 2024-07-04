@@ -24,20 +24,20 @@
 
 
 # 0.14.3
-# 0.15   25.09.2000 Added link to this wrapper
-# 0.16   07.11.2000 Get version from ipcalc
-# 0.17   09.01.2001 Added screenshot
-# 0.18   02.02.2001 Played with the html
-# 0.18.1 03.02.2001 Played even more with the html
-# 0.19   01.04.2001 Help text for wildcard netmask / Credits
-# 0.20   20.05.2001 Changed error messages
-# 0.21   19.06.2001 Adapted to new -c option
-# 0.22   30.07.2002 Stole javascript at dict.leo.org
-# 0.23	 28.10.2004 Remove whitespace in input fields
-#                   Idea by David Shirlay David.Shirley(a)team.telstra.com
-# 0.24   07.07.2005 Added license text to cgi-wrapper. Add style into cgi script
-# 0.25	 11.01.2006 Link to screenshot was wrong.
-# 0.26   27.07.2006 Replaced REQUEST_URI with SCRIPT_URL to prevent cross-site-scripting attacks
+# 0.15      25.09.2000   Added link to this wrapper
+# 0.16      07.11.2000   Get version from ipcalc
+# 0.17      09.01.2001   Added screenshot
+# 0.18      02.02.2001   Played with the html
+# 0.18.1    03.02.2001   Played even more with the html
+# 0.19      01.04.2001   Help text for wildcard netmask / Credits
+# 0.20      20.05.2001   Changed error messages
+# 0.21      19.06.2001   Adapted to new -c option
+# 0.22      30.07.2002   Stole javascript at dict.leo.org
+# 0.23      28.10.2004   Remove whitespace in input fields
+#                        Idea by David Shirlay David.Shirley(a)team.telstra.com
+# 0.24      07.07.2005   Added license text to cgi-wrapper. Add style into cgi script
+# 0.25      11.01.2006   Link to screenshot was wrong.
+# 0.26      27.07.2006   Replaced REQUEST_URI with SCRIPT_URL to prevent cross-site-scripting attacks
 
 $|=1;
 $ipcalc = "/usr/local/bin/ipcalc";
