@@ -119,16 +119,19 @@ print << "EOF";
 <!DOCTYPE html>
 <html lang="en">
    <head> 
-   <meta charset="utf-8">
-   <title>IP Calculator / IP Subnetting</title>
-   <meta name="generator" content="ipcalc $version" />
-   <meta name="keywords" content="ipcalc,ipv4,ipv6,subnet,netmask,calculator"/>
-   <meta name="author" content="Krischan Jodies"/>
-   <meta name="application-name" content="ipcalc $version" />
-   <meta translate="no"/>
-   <meta name="description content="ipcalc report by https://jodies.de/ipcalc"/>
-   <meta name="robots" content="noindex, nofollow">
-   <link rel="shortcut icon" href="https://jodies.de/favicon.ico">
+      <meta charset="utf-8">
+      <meta translate="no">
+      <meta name="robots" content="noindex, nofollow">
+      <title>IP Calculator / IP Subnetting</title>
+
+      <meta name="generator" content="ipcalc $version">
+      <meta name="keywords" content="ipcalc,ipv4,ipv6,subnet,netmask,calculator">
+      <meta name="author" content="Krischan Jodies">
+      <meta name="application-name" content="ipcalc $version">
+      <meta name="description" content="ipcalc report by https://jodies.de/ipcalc">
+      
+      <link rel="shortcut icon" href="https://jodies.de/favicon.ico">
+
    <script language="JavaScript" type="text/javascript">
       <!-- 
       function setFocus()
