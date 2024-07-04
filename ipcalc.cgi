@@ -128,15 +128,18 @@ print << "EOF";
 <!DOCTYPE html>
 <html lang="en">
    <head> 
-   <meta charset="utf-8">
-   <title>IP Calculator / IP Subnetting - (TilKenneth/internal)</title>
-   <meta name="generator" content="ipcalc $version (TilKenneth/internal)" />
-   <meta name="keywords" content="ipcalc-internal,ipv4,ipv6,subnet,netmask,calculator"/>
-   <meta name="author" content="Krischan Jodies, Github/TilKenneth"/>
-   <meta name="application-name" content="ipcalc $version (TilKenneth/internal)" />
-   <meta translate="no"/>
-   <meta name="description content="ipcalc (TilKenneth/internal) report by https://github.com/TilKenneth/ipcalc/tree/internal"/>
-   <meta name="robots" content="noindex, nofollow">
+      <meta charset="utf-8">
+      <meta translate="no">
+      <meta name="robots" content="noindex, nofollow">
+      <title>IP Calculator / IP Subnetting - (TilKenneth/internal)</title>
+
+      <meta name="generator" content="ipcalc $version (TilKenneth/internal)">
+      <meta name="keywords" content="ipcalc-internal,ipv4,ipv6,subnet,netmask,calculator">
+      <meta name="author" content="Krischan Jodies, Github/TilKenneth">
+      <meta name="application-name" content="ipcalc $version (TilKenneth/internal)">
+      <meta name="description" content="ipcalc (TilKenneth/internal) report by https://github.com/TilKenneth/ipcalc/tree/internal">
+      
+   
    <script language="JavaScript" type="text/javascript">
       <!-- 
       function setFocus()
