@@ -106,3 +106,4 @@ rework getclass
 0.51 2021-06-20 bugifx: split_network results were wrong since introduction of bignum. log function replaced
 		with loop.
                 Thanks to Christian Ebnöter for finding thix bug
+0.51-ki 2024-07-04 internal: Clean up for tooling. (TilKenneth)

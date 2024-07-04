@@ -2,6 +2,8 @@
 
 This is the ipv6 capable continuation of the subnet calculator from http://jodies.de/ipcalc. 
 
+This source has been modified from the original at https://github.com/kjokjo/ipcalc and lives at https://github.com/TilKenneth/ipcalc/tree/internal.
+
 <pre>
 > ipcalc 192.168.1.1/24
 Address:   192.168.1.1          11000000.10101000.00000001. 00000001
