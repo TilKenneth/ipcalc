@@ -38,9 +38,23 @@
 # 0.24      07.07.2005   Added license text to cgi-wrapper. Add style into cgi script
 # 0.25      11.01.2006   Link to screenshot was wrong.
 # 0.26      27.07.2006   Replaced REQUEST_URI with SCRIPT_URL to prevent cross-site-scripting attacks
+# 0.26.1-ki 05.07.2024   get_ipcalc() to test path or current dir for 'ipcalc'
 
 $|=1;
-$ipcalc = "/usr/local/bin/ipcalc";
+
+use File::Spec::Functions 'catfile';
+
+sub get_ipcalc() {
+   $filename = "$ENV{SCRIPT_FILENAME}";
+   $filename=~m/^.+\//;
+   $path=$&;
+   $retval = catfile($path, 'ipcalc');
+	$default = "/usr/local/bin/ipcalc";
+	($retval = $default) if -x $default; 
+	return $retval;
+}
+
+$ipcalc = get_ipcalc();
 $MAIL_ADDRESS="ipcalc-200502&#64;jodies.de";
 # history:
 # 200404 
