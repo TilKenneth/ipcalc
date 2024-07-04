@@ -110,12 +110,20 @@ sub main
       $break  = "<br>";
       #$private = "(<a href=\"https://www.ietf.org/rfc/rfc1918.txt\">Private Internet</a>)";
 #      print "<pre>\n";
+# TODO: parameters should be in title and description.
 print << 'EOF';
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta HTTP-EQUIV="content-type" CONTENT="text/html; charset=UTF-8">
-<title>Bla</title>
+<meta charset="utf-8">
+<meta name="generator" content="ipcalc $version" />
+<meta name="keywords" content="ipcalc,ipv4,ipv6,subnet,netmask,calculator"/>
+<meta name="author" content="Krischan Jodies"/>
+<meta name="application-name" content="ipcalc $version" />
+<meta translate="no"/>
+<meta name="description content="ipcalc report by https://jodies.de/ipcalc"/>
+<meta name="robots" content="noindex, nofollow">
+<title>Report - ipcalc $version</title>
 </head>
 <body>
 EOF
